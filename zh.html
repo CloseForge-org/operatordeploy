@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OperatorDeploy — AI Agents for Small Business Automation</title>
-  <meta name="description" content="OperatorDeploy deploys and maintains AI agents that automate your business processes. Starting at $250/mo. Expert integration with your existing tools.">
-  <meta name="keywords" content="AI automation, small business AI, AI agents, business process automation, AI deployment">
+  <title>OperatorDeploy — 為中小企業部署 AI 智能代理</title>
+  <meta name="description" content="OperatorDeploy 為您的企業部署並維護 AI 智能代理，自動化業務流程。每月 $250 美元起，與您現有的工具無縫整合。">
+  <meta name="keywords" content="AI 自動化, 中小企業 AI, AI 智能代理, 業務流程自動化, AI 部署">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="OperatorDeploy — AI Agents for Small Business Automation">
-  <meta property="og:description" content="We deploy and maintain AI agents that automate your business processes. Starting at $250/mo.">
+  <meta property="og:title" content="OperatorDeploy — 為中小企業部署 AI 智能代理">
+  <meta property="og:description" content="我們為您部署並維護 AI 智能代理，自動化您的業務流程。每月 $250 美元起。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://operatordeploy.com">
-  <meta property="og:image" content="https://operatordeploy.com/icon-unlock-v2.png">
+  <meta property="og:url" content="https://operatordeploy.com/zh">
+  <meta property="og:locale" content="zh_TW">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="OperatorDeploy — AI Agents for Small Business Automation">
-  <meta name="twitter:description" content="We deploy and maintain AI agents that automate your business processes. Starting at $250/mo.">
+  <meta name="twitter:title" content="OperatorDeploy — 為中小企業部署 AI 智能代理">
+  <meta name="twitter:description" content="我們為您部署並維護 AI 智能代理，自動化您的業務流程。每月 $250 美元起。">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M13 20V16C13 10.477 17.477 6 23 6C28.523 6 33 10.477 33 16V18' stroke='%23EF4444' stroke-width='4' stroke-linecap='round' fill='none'/><rect x='11' y='22' width='26' height='22' rx='4' fill='%23EF4444'/><path d='M24 40V30' stroke='white' stroke-width='3.5' stroke-linecap='round'/><path d='M18.5 34.5L24 29L29.5 34.5' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>" type="image/svg+xml">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,10 +35,10 @@
       --border: #E2E8F0;
     }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Noto Sans TC', 'Inter', sans-serif;
       background: var(--surface);
       color: var(--navy);
-      line-height: 1.6;
+      line-height: 1.8;
       margin: 0;
     }
     a { color: var(--red); text-decoration: none; }
@@ -64,12 +64,22 @@
       justify-content: space-between;
     }
     .logo { display: flex; align-items: center; gap: 12px; }
-    .logo img { width: 80px; height: auto; }
     .logo svg { width: 44px; height: 44px; flex-shrink: 0; }
-    .logo span { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; color: var(--white); }
-    nav ul { display: flex; list-style: none; gap: 24px; }
+    .logo span { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.5px; color: var(--white); }
+    nav ul { display: flex; list-style: none; gap: 20px; align-items: center; }
     nav a { color: var(--white); font-weight: 500; text-decoration: none; font-size: 15px; }
     nav a:hover { color: var(--red); text-decoration: none; }
+    .lang-switch {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .lang-switch:hover { background: rgba(255,255,255,0.2); text-decoration: none; }
 
     /* Hamburger */
     .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
@@ -105,9 +115,9 @@
       padding: 100px 0 80px;
       text-align: center;
     }
-    .hero h1 { font-size: 52px; font-weight: 800; margin-bottom: 24px; line-height: 1.08; letter-spacing: -1px; }
+    .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 24px; line-height: 1.2; }
     .hero h1 em { font-style: normal; color: var(--red); }
-    .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 40px; color: rgba(255,255,255,0.85); line-height: 1.6; }
+    .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 40px; color: rgba(255,255,255,0.85); line-height: 1.8; }
     .cta-btn {
       background: var(--red);
       color: var(--white);
@@ -137,7 +147,7 @@
     }
     .feature-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.08); transform: translateY(-2px); }
     .feature-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
-    .feature-card p { color: var(--slate); font-size: 15px; line-height: 1.7; }
+    .feature-card p { color: var(--slate); font-size: 15px; line-height: 1.8; }
     .feature-icon {
       width: 48px; height: 48px;
       background: var(--red);
@@ -151,13 +161,8 @@
     /* ─── HOW IT WORKS ─── */
     .how-it-works { background: var(--navy); color: var(--white); padding: 80px 0; }
     .how-it-works .section-title, .how-it-works .section-subtitle { color: var(--white); }
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; counter-reset: step; }
-    .step {
-      text-align: center;
-      padding: 24px;
-      position: relative;
-      counter-increment: step;
-    }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
+    .step { text-align: center; padding: 24px; }
     .step-number {
       width: 56px; height: 56px;
       background: var(--red);
@@ -166,9 +171,10 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 24px; font-weight: 800;
       margin: 0 auto 20px;
+      font-family: 'Inter', sans-serif;
     }
     .step h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
-    .step p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.7; }
+    .step p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.8; }
 
     /* ─── PRICING ─── */
     .pricing { padding: 80px 0; }
@@ -184,6 +190,7 @@
     }
     .pricing-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
     .pricing-card .price {
+      font-family: 'Inter', sans-serif;
       font-size: 56px;
       font-weight: 800;
       color: var(--navy);
@@ -192,12 +199,7 @@
     }
     .pricing-card .price span { font-size: 20px; font-weight: 500; color: var(--slate); }
     .pricing-card .price-label { font-size: 14px; color: var(--slate); margin-bottom: 24px; }
-    .pricing-card ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-      margin-bottom: 32px;
-    }
+    .pricing-card ul { list-style: none; padding: 0; text-align: left; margin-bottom: 32px; }
     .pricing-card li {
       padding: 10px 0;
       border-bottom: 1px solid var(--border);
@@ -213,12 +215,7 @@
     /* ─── INTEGRATIONS ─── */
     .integrations { background: #F1F5F9; padding: 60px 0; }
     .integrations .section-subtitle { margin-bottom: 36px; }
-    .int-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
+    .int-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; }
     .int-item {
       background: var(--white);
       border: 1px solid var(--border);
@@ -258,17 +255,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Noto Sans TC', 'Inter', sans-serif;
     }
     .faq-question:hover { background: #F8FAFC; }
     .faq-question .arrow { font-size: 18px; color: var(--slate); transition: transform 0.3s; }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
     .faq-answer.open { max-height: 300px; }
-    .faq-answer-inner { padding: 0 24px 20px; font-size: 15px; color: var(--slate); line-height: 1.7; }
+    .faq-answer-inner { padding: 0 24px 20px; font-size: 15px; color: var(--slate); line-height: 1.8; }
 
     /* ─── CTA SECTION ─── */
     .cta-section {
@@ -295,9 +288,8 @@
       margin-bottom: 40px;
     }
     .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; color: var(--white); font-weight: 700; font-size: 20px; }
-    .footer-logo img { width: 60px; height: auto; }
     .footer-logo svg { width: 36px; height: 36px; flex-shrink: 0; }
-    .footer-col h4 { color: var(--white); font-size: 14px; margin-bottom: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .footer-col h4 { color: var(--white); font-size: 14px; margin-bottom: 14px; font-weight: 600; }
     .footer-col ul { list-style: none; padding: 0; }
     .footer-col li { margin-bottom: 8px; }
     .footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; }
@@ -307,7 +299,7 @@
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
       .hero { padding: 64px 0 56px; }
-      .hero h1 { font-size: 32px; }
+      .hero h1 { font-size: 30px; }
       .hero p { font-size: 17px; }
       .section-title { font-size: 26px; }
       .section-subtitle { font-size: 16px; }
@@ -331,11 +323,8 @@
       <div class="header-inner">
         <div class="logo">
           <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="OperatorDeploy Logo">
-            <!-- Shackle (open, swung left) -->
             <path d="M13 20V16C13 10.477 17.477 6 23 6C28.523 6 33 10.477 33 16V18" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
-            <!-- Lock body -->
             <rect x="11" y="22" width="26" height="22" rx="4" fill="#FFFFFF"/>
-            <!-- Red upward arrow inside lock body -->
             <path d="M24 40V30" stroke="#EF4444" stroke-width="3.5" stroke-linecap="round"/>
             <path d="M18.5 34.5L24 29L29.5 34.5" stroke="#EF4444" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
@@ -343,25 +332,25 @@
         </div>
         <nav>
           <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="mailto:roger@operatordeploy.com">Contact Us</a></li>
-            <li><a href="zh.html" style="background:rgba(255,255,255,0.1);padding:4px 12px;border-radius:6px;font-size:13px;font-weight:600;">中文</a></li>
+            <li><a href="#features">服務特色</a></li>
+            <li><a href="#how-it-works">運作方式</a></li>
+            <li><a href="#pricing">方案價格</a></li>
+            <li><a href="#faq">常見問題</a></li>
+            <li><a href="mailto:roger@operatordeploy.com">聯絡我們</a></li>
+            <li><a href="index.html" class="lang-switch">EN</a></li>
           </ul>
         </nav>
-        <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+        <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="選單">
           <span></span><span></span><span></span>
         </button>
       </div>
       <div class="mobile-menu" id="mobileMenu">
-        <a href="#features" onclick="this.parentElement.classList.remove('open')">Features</a>
-        <a href="#how-it-works" onclick="this.parentElement.classList.remove('open')">How It Works</a>
-        <a href="#pricing" onclick="this.parentElement.classList.remove('open')">Pricing</a>
-        <a href="#faq" onclick="this.parentElement.classList.remove('open')">FAQ</a>
-        <a href="mailto:roger@operatordeploy.com">Contact Us</a>
-        <a href="zh.html">🌐 中文版</a>
+        <a href="#features" onclick="this.parentElement.classList.remove('open')">服務特色</a>
+        <a href="#how-it-works" onclick="this.parentElement.classList.remove('open')">運作方式</a>
+        <a href="#pricing" onclick="this.parentElement.classList.remove('open')">方案價格</a>
+        <a href="#faq" onclick="this.parentElement.classList.remove('open')">常見問題</a>
+        <a href="mailto:roger@operatordeploy.com">聯絡我們</a>
+        <a href="index.html">🌐 English</a>
       </div>
     </div>
   </header>
@@ -369,37 +358,37 @@
   <!-- ─── HERO ─── -->
   <section class="hero">
     <div class="container">
-      <h1>Deploy AI Agents That <em>Run Your Business</em></h1>
-      <p>We use expert-level AI knowledge to deploy and maintain intelligent agents that automate your business processes — so you can focus on growth, not operations.</p>
-      <a href="mailto:roger@operatordeploy.com?subject=Request%20a%20Call%20–%20OperatorDeploy" class="cta-btn">Request a Call</a>
+      <h1>部署 AI 智能代理<br><em>讓 AI 為您經營事業</em></h1>
+      <p>我們運用頂尖的 AI 專業知識，為您部署並維護智能代理，自動化您的業務流程——讓您專注於成長，而非瑣碎的日常營運。</p>
+      <a href="mailto:roger@operatordeploy.com?subject=預約諮詢電話%20–%20OperatorDeploy" class="cta-btn">預約免費諮詢</a>
     </div>
   </section>
 
   <!-- ─── FEATURES ─── -->
   <section class="features" id="features">
     <div class="container">
-      <h2 class="section-title">What We Deliver</h2>
-      <p class="section-subtitle">AI agents tailored to your business, deployed with the tools you already use.</p>
+      <h2 class="section-title">我們提供什麼</h2>
+      <p class="section-subtitle">根據您的業務量身打造 AI 智能代理，與您現有的工具無縫整合。</p>
       <div class="feature-grid">
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
-          <h3>End-to-End Automation</h3>
-          <p>From customer communications to inventory management — we identify repetitive processes and replace them with autonomous AI agents that work 24/7.</p>
+          <h3>全流程自動化</h3>
+          <p>從客戶溝通到庫存管理——我們找出重複性工作，用 24/7 全天候運作的 AI 智能代理取而代之。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🔗</div>
-          <h3>Deep Integrations</h3>
-          <p>Your AI agents connect directly with your existing platforms — Google Workspace, Discord, LINE, Hospitable, n8n, Zapier, and more — no rip-and-replace required.</p>
+          <h3>深度系統整合</h3>
+          <p>AI 代理直接連結您現有的平台——Google Workspace、Discord、LINE、Hospitable、n8n、Zapier 等，無需更換現有系統。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🌐</div>
-          <h3>Automatic Internet Learning</h3>
-          <p>Agents continuously scan the web for market trends, competitor moves, and industry updates relevant to your business — delivering insights automatically.</p>
+          <h3>自動網路學習</h3>
+          <p>代理持續掃描網路上的市場趨勢、競爭對手動態及產業更新，自動為您提供最新商業情報。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🧠</div>
-          <h3>Self-Recursive Improvement</h3>
-          <p>Our agents learn from their own outputs and your feedback, compounding improvements over time without manual retraining or intervention.</p>
+          <h3>自我遞迴優化</h3>
+          <p>我們的代理從自身產出和您的回饋中學習，隨時間持續提升效能，無需人工重新訓練。</p>
         </div>
       </div>
     </div>
@@ -408,28 +397,28 @@
   <!-- ─── HOW IT WORKS ─── -->
   <section class="how-it-works" id="how-it-works">
     <div class="container">
-      <h2 class="section-title">How It Works</h2>
-      <p class="section-subtitle">From first call to live automation in four steps.</p>
+      <h2 class="section-title">運作方式</h2>
+      <p class="section-subtitle">從首次通話到上線運作，只需四個步驟。</p>
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>Discovery Call</h3>
-          <p>We learn your business, identify manual processes, and map out which tasks AI agents can take over immediately.</p>
+          <h3>需求探索通話</h3>
+          <p>我們深入了解您的業務，找出手動流程，規劃 AI 代理可以立即接手的工作。</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>Custom AI Design</h3>
-          <p>We design agents tailored to your workflows — choosing the right models, integrations, and automation logic for your needs.</p>
+          <h3>客製化 AI 設計</h3>
+          <p>根據您的工作流程量身設計代理——選擇最適合的模型、整合方案與自動化邏輯。</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>Deployment</h3>
-          <p>Agents go live in your environment. We handle all the technical setup, testing, and integration with your existing tools.</p>
+          <h3>部署上線</h3>
+          <p>代理在您的環境中正式啟用。所有技術設定、測試和系統整合皆由我們完成。</p>
         </div>
         <div class="step">
           <div class="step-number">4</div>
-          <h3>Ongoing Optimization</h3>
-          <p>We monitor performance, apply updates, and continuously improve your agents as your business evolves.</p>
+          <h3>持續優化</h3>
+          <p>我們監控效能、套用更新，並隨著您的業務發展持續改進 AI 代理。</p>
         </div>
       </div>
     </div>
@@ -438,21 +427,21 @@
   <!-- ─── PRICING ─── -->
   <section class="pricing" id="pricing">
     <div class="container">
-      <h2 class="section-title">Pricing</h2>
-      <p class="section-subtitle">Transparent pricing. No hidden fees. Cancel anytime.</p>
+      <h2 class="section-title">方案價格</h2>
+      <p class="section-subtitle">透明定價，無隱藏費用，隨時可取消。</p>
       <div class="pricing-card">
-        <div class="price">$250<span>/mo</span></div>
-        <div class="price-label">Basic setup · Customized quotes for larger deployments</div>
+        <div class="price">$250<span>/月</span></div>
+        <div class="price-label">基礎方案 · 大型部署另提供客製化報價</div>
         <ul>
-          <li>Personal assistant AI agent deployment</li>
-          <li>Integration with your existing tools</li>
-          <li>Automatic internet learning</li>
-          <li>Self-recursive improvement</li>
-          <li>Ongoing monitoring &amp; optimization</li>
-          <li>Live within 5–10 business days</li>
-          <li>You own your agents and data</li>
+          <li>個人助理 AI 代理部署</li>
+          <li>與您現有工具整合</li>
+          <li>自動網路學習功能</li>
+          <li>自我遞迴優化</li>
+          <li>持續監控與優化</li>
+          <li>5–10 個工作天內上線</li>
+          <li>代理與資料完全歸您所有</li>
         </ul>
-        <a href="mailto:roger@operatordeploy.com?subject=Request%20a%20Call%20–%20OperatorDeploy" class="cta-btn">Request a Call</a>
+        <a href="mailto:roger@operatordeploy.com?subject=預約諮詢電話%20–%20OperatorDeploy" class="cta-btn">預約免費諮詢</a>
       </div>
     </div>
   </section>
@@ -460,8 +449,8 @@
   <!-- ─── INTEGRATIONS ─── -->
   <section class="integrations" id="integrations">
     <div class="container">
-      <h2 class="section-title">Integrations</h2>
-      <p class="section-subtitle">We connect your AI agents with the platforms your business already runs on.</p>
+      <h2 class="section-title">系統整合</h2>
+      <p class="section-subtitle">我們將 AI 代理連結到您企業日常使用的各種平台。</p>
       <div class="int-grid">
         <div class="int-item"><span class="int-icon">📧</span> Google Workspace</div>
         <div class="int-item"><span class="int-icon">💬</span> Discord</div>
@@ -485,70 +474,70 @@
   <!-- ─── FAQ ─── -->
   <section class="faq" id="faq">
     <div class="container">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <p class="section-subtitle">Common questions from business owners like you.</p>
+      <h2 class="section-title">常見問題</h2>
+      <p class="section-subtitle">企業主最常問的問題。</p>
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-            How long does it take to get an AI agent live?
+            AI 代理多久能上線？
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Most agents go live within 5–10 business days. Simple personal assistant workflows can be running even sooner depending on complexity.</div>
+            <div class="faq-answer-inner">大多數代理可在 5–10 個工作天內上線。簡單的個人助理工作流程可以更快完成，視複雜程度而定。</div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-            Do I need any technical expertise?
+            我需要具備技術知識嗎？
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">No. We handle all the technical work — from design to deployment to ongoing maintenance. You just tell us what processes you want automated, and we build it.</div>
+            <div class="faq-answer-inner">完全不需要。從設計到部署到持續維護，所有技術工作都由我們處理。您只需告訴我們想自動化哪些流程，我們來建置。</div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-            What industries do you work with?
+            適用於哪些產業？
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Any small business. If you have processes that eat up your time or your team's time, we can automate them. Hospitality, real estate, e-commerce, professional services, content creation, finance — we've worked across all of them.</div>
+            <div class="faq-answer-inner">適用於任何中小企業。只要您有耗時的重複性流程，我們都能自動化。飯店民宿、房地產、電商、專業服務、內容創作、金融——我們都有經驗。</div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-            What does "self-recursive learning" mean?
+            什麼是「自我遞迴學習」？
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Your AI agents review their own performance and outputs over time, identifying patterns and improvements automatically. Think of it as an employee that gets better every week without being trained — learning from results, not just instructions.</div>
+            <div class="faq-answer-inner">AI 代理會持續檢視自己的表現與產出，自動識別模式並進行改進。就像一個每週都在進步的員工，從結果中學習，而不只是依賴指令。</div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-            Can I cancel anytime?
+            可以隨時取消嗎？
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Yes. No long-term contracts. You can cancel your subscription at any time. We believe our work speaks for itself.</div>
+            <div class="faq-answer-inner">可以。沒有長期合約，隨時可以取消訂閱。我們相信服務品質會為自己說話。</div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-            What's included in the $250/mo starting price?
+            每月 $250 美元包含什麼？
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">The $250/mo tier includes basic setup with personal assistant workflows — an AI agent deployed into your environment, integrated with your existing tools, with ongoing monitoring and optimization. Need more agents, complex integrations, or multi-department automation? We provide customized quotes based on your scope.</div>
+            <div class="faq-answer-inner">$250/月方案包含基礎個人助理工作流程設定——在您的環境中部署 AI 代理、整合現有工具、持續監控與優化。需要更多代理、複雜整合或跨部門自動化？我們提供客製化報價。</div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-            Do I own my agents and data if I cancel?
+            取消後代理和資料歸誰？
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Yes. Your agents, data, and configurations belong to you. If you cancel, we'll hand everything over — no lock-in, no hostage-taking.</div>
+            <div class="faq-answer-inner">歸您所有。您的代理、資料和設定都屬於您。取消後我們會完整移交——不綁定、不扣留。</div>
           </div>
         </div>
       </div>
@@ -558,9 +547,9 @@
   <!-- ─── CTA SECTION ─── -->
   <section class="cta-section">
     <div class="container">
-      <h2 class="section-title">Ready to Automate Your Business?</h2>
-      <p class="section-subtitle">Book a call. We'll map out exactly which processes AI can take over — and how fast.</p>
-      <a href="mailto:roger@operatordeploy.com?subject=Request%20a%20Call%20–%20OperatorDeploy" class="cta-btn">Request a Call</a>
+      <h2 class="section-title">準備好讓 AI 為您工作了嗎？</h2>
+      <p class="section-subtitle">預約一通電話，我們會為您規劃哪些流程可以用 AI 接手——以及多快能上線。</p>
+      <a href="mailto:roger@operatordeploy.com?subject=預約諮詢電話%20–%20OperatorDeploy" class="cta-btn">預約免費諮詢</a>
     </div>
   </section>
 
@@ -578,19 +567,19 @@
             </svg>
             <span>OperatorDeploy</span>
           </div>
-          <p>AI agents deployed and maintained for your business.</p>
+          <p>為您的企業部署並維護 AI 智能代理。</p>
         </div>
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>導覽</h4>
           <ul>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#features">服務特色</a></li>
+            <li><a href="#how-it-works">運作方式</a></li>
+            <li><a href="#pricing">方案價格</a></li>
+            <li><a href="#faq">常見問題</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4>聯絡方式</h4>
           <ul>
             <li><a href="mailto:roger@operatordeploy.com">roger@operatordeploy.com</a></li>
           </ul>
