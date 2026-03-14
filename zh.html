@@ -337,7 +337,7 @@
             <li><a href="#pricing">方案價格</a></li>
             <li><a href="#faq">常見問題</a></li>
             <li><a href="mailto:roger@operatordeploy.com">聯絡我們</a></li>
-            <li><a href="index.html" class="lang-switch">EN</a></li>
+            <li><a href="index.html" class="lang-switch" onclick="document.cookie='lang=en;path=/;max-age=31536000'">EN</a></li>
           </ul>
         </nav>
         <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="選單">
@@ -350,7 +350,7 @@
         <a href="#pricing" onclick="this.parentElement.classList.remove('open')">方案價格</a>
         <a href="#faq" onclick="this.parentElement.classList.remove('open')">常見問題</a>
         <a href="mailto:roger@operatordeploy.com">聯絡我們</a>
-        <a href="index.html">🌐 English</a>
+        <a href="index.html" onclick="document.cookie='lang=en;path=/;max-age=31536000'">🌐 English</a>
       </div>
     </div>
   </header>

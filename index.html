@@ -324,6 +324,17 @@
   </style>
 </head>
 <body>
+  <script>
+    // Auto-detect Chinese browser language and redirect to zh.html
+    // Skip if user manually chose English (cookie set)
+    (function() {
+      if (document.cookie.indexOf('lang=en') !== -1) return;
+      var lang = navigator.language || navigator.userLanguage || '';
+      if (/^zh/i.test(lang)) {
+        window.location.replace('zh.html');
+      }
+    })();
+  </script>
 
   <!-- ─── HEADER ─── -->
   <header>
@@ -348,7 +359,7 @@
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="mailto:roger@operatordeploy.com">Contact Us</a></li>
-            <li><a href="zh.html" style="background:rgba(255,255,255,0.1);padding:4px 12px;border-radius:6px;font-size:13px;font-weight:600;">中文</a></li>
+            <li><a href="zh.html" style="background:rgba(255,255,255,0.1);padding:4px 12px;border-radius:6px;font-size:13px;font-weight:600;" onclick="document.cookie='lang=;path=/;max-age=0'">中文</a></li>
           </ul>
         </nav>
         <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
@@ -361,7 +372,7 @@
         <a href="#pricing" onclick="this.parentElement.classList.remove('open')">Pricing</a>
         <a href="#faq" onclick="this.parentElement.classList.remove('open')">FAQ</a>
         <a href="mailto:roger@operatordeploy.com">Contact Us</a>
-        <a href="zh.html">🌐 中文版</a>
+        <a href="zh.html" onclick="document.cookie='lang=;path=/;max-age=0'">🌐 中文版</a>
       </div>
     </div>
   </header>
