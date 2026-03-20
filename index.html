@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OperatorDeploy — AI Agents for Small Business Automation</title>
-  <meta name="description" content="OperatorDeploy deploys and maintains AI agents that automate your business processes. Starting at $250/mo. Expert integration with your existing tools.">
-  <meta name="keywords" content="AI automation, small business AI, AI agents, business process automation, AI deployment">
+  <title>OperatorDeploy — Enterprise AI Agents with NVIDIA NemoClaw Security</title>
+  <meta name="description" content="OperatorDeploy deploys enterprise-grade AI agents powered by NVIDIA NemoClaw. Digital employee replication, workflow automation, and customer service — with built-in security and privacy.">
+  <meta name="keywords" content="AI automation, NVIDIA NemoClaw, digital employee, AI agents, enterprise AI, business process automation, OpenClaw">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="OperatorDeploy — AI Agents for Small Business Automation">
-  <meta property="og:description" content="We deploy and maintain AI agents that automate your business processes. Starting at $250/mo.">
+  <meta property="og:title" content="OperatorDeploy — Enterprise AI Agents with NVIDIA NemoClaw Security">
+  <meta property="og:description" content="Deploy enterprise-grade AI agents with built-in security and privacy. Digital employee replication, workflow automation, customer service.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://operatordeploy.com">
-  <meta property="og:image" content="https://operatordeploy.com/icon-unlock-v2.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="OperatorDeploy — AI Agents for Small Business Automation">
-  <meta name="twitter:description" content="We deploy and maintain AI agents that automate your business processes. Starting at $250/mo.">
+  <meta name="twitter:title" content="OperatorDeploy — Enterprise AI Agents with NVIDIA NemoClaw Security">
+  <meta name="twitter:description" content="Deploy enterprise-grade AI agents with built-in security and privacy. Digital employee replication, workflow automation, customer service.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M13 20V16C13 10.477 17.477 6 23 6C28.523 6 33 10.477 33 16V18' stroke='%23EF4444' stroke-width='4' stroke-linecap='round' fill='none'/><rect x='11' y='22' width='26' height='22' rx='4' fill='%23EF4444'/><path d='M24 40V30' stroke='white' stroke-width='3.5' stroke-linecap='round'/><path d='M18.5 34.5L24 29L29.5 34.5' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>" type="image/svg+xml">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,18 +28,13 @@
       --navy-light: #1E3045;
       --red: #EF4444;
       --red-dark: #DC2626;
+      --green: #76B900;
       --white: #FFFFFF;
       --slate: #64748B;
       --surface: #F8FAFC;
       --border: #E2E8F0;
     }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--surface);
-      color: var(--navy);
-      line-height: 1.6;
-      margin: 0;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--surface); color: var(--navy); line-height: 1.6; margin: 0; }
     a { color: var(--red); text-decoration: none; }
     a:hover { text-decoration: underline; }
     img { max-width: 100%; }
@@ -49,253 +43,129 @@
     .section-subtitle { font-size: 18px; color: var(--slate); max-width: 800px; margin: 0 auto 48px; text-align: center; }
 
     /* ─── HEADER ─── */
-    header {
-      background: var(--navy);
-      color: var(--white);
-      padding: 16px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    header { background: var(--navy); color: var(--white); padding: 16px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
     .logo { display: flex; align-items: center; gap: 12px; }
-    .logo img { width: 80px; height: auto; }
     .logo svg { width: 44px; height: 44px; flex-shrink: 0; }
     .logo span { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; color: var(--white); }
-    nav ul { display: flex; list-style: none; gap: 24px; }
+    nav ul { display: flex; list-style: none; gap: 20px; }
     nav a { color: var(--white); font-weight: 500; text-decoration: none; font-size: 15px; }
     nav a:hover { color: var(--red); text-decoration: none; }
-
-    /* Hamburger */
     .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
     .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); margin: 6px 0; transition: 0.3s; }
-    .mobile-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: var(--navy);
-      padding: 16px 24px;
-      border-top: 1px solid var(--navy-light);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    }
+    .mobile-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); padding: 16px 24px; border-top: 1px solid var(--navy-light); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
     .mobile-menu.open { display: block; }
-    .mobile-menu a {
-      display: block;
-      color: var(--white);
-      font-weight: 500;
-      font-size: 16px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--navy-light);
-      text-decoration: none;
-    }
+    .mobile-menu a { display: block; color: var(--white); font-weight: 500; font-size: 16px; padding: 12px 0; border-bottom: 1px solid var(--navy-light); text-decoration: none; }
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu a:hover { color: var(--red); }
 
     /* ─── HERO ─── */
-    .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-      color: var(--white);
-      padding: 100px 0 80px;
-      text-align: center;
-    }
-    .hero h1 { font-size: 52px; font-weight: 800; margin-bottom: 24px; line-height: 1.08; letter-spacing: -1px; }
+    .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: var(--white); padding: 100px 0 80px; text-align: center; }
+    .hero h1 { font-size: 52px; font-weight: 900; margin-bottom: 24px; line-height: 1.08; letter-spacing: -1.5px; }
     .hero h1 em { font-style: normal; color: var(--red); }
-    .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 40px; color: rgba(255,255,255,0.85); line-height: 1.6; }
-    .cta-btn {
-      background: var(--red);
-      color: var(--white);
-      font-size: 18px;
-      font-weight: 600;
-      padding: 16px 36px;
-      border-radius: 8px;
-      display: inline-block;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.2s;
-    }
+    .hero p { font-size: 20px; max-width: 750px; margin: 0 auto 32px; color: rgba(255,255,255,0.85); line-height: 1.6; }
+    .hero-badges { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+    .hero-badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 6px 16px; border-radius: 999px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.9); display: inline-flex; align-items: center; gap: 6px; }
+    .hero-badge .nvidia-green { color: var(--green); }
+    .cta-btn { background: var(--red); color: var(--white); font-size: 18px; font-weight: 600; padding: 16px 36px; border-radius: 8px; display: inline-block; text-decoration: none; transition: background 0.3s, transform 0.2s; }
     .cta-btn:hover { background: var(--red-dark); text-decoration: none; transform: translateY(-1px); }
+    .cta-btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.3); color: var(--white); font-size: 16px; font-weight: 600; padding: 14px 28px; border-radius: 8px; display: inline-block; text-decoration: none; margin-left: 16px; transition: border-color 0.3s; }
+    .cta-btn-outline:hover { border-color: var(--white); text-decoration: none; }
+
+    /* ─── DIGITAL EMPLOYEES (HERO FEATURE) ─── */
+    .digital-employees { padding: 80px 0; background: var(--white); }
+    .de-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .de-content h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; line-height: 1.15; text-align: left; }
+    .de-content h2 em { font-style: normal; color: var(--red); }
+    .de-content p.lead { font-size: 17px; color: var(--slate); margin-bottom: 24px; line-height: 1.7; }
+    .de-list { list-style: none; padding: 0; margin-bottom: 32px; }
+    .de-list li { padding: 10px 0; font-size: 15px; color: #334155; display: flex; align-items: flex-start; gap: 10px; border-bottom: 1px solid var(--border); }
+    .de-list li:last-child { border-bottom: none; }
+    .de-list li::before { content: "→"; color: var(--red); font-weight: 700; font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .de-visual { background: var(--navy); border-radius: 16px; padding: 40px; text-align: center; }
+    .de-visual-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    .de-agent { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 20px 12px; text-align: center; }
+    .de-agent .emoji { font-size: 32px; margin-bottom: 8px; }
+    .de-agent .name { font-size: 12px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .de-agent .role { font-size: 10px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.05em; }
+    .de-agent.highlight { border-color: var(--red); background: rgba(239,68,68,0.1); }
+    .de-arrows { font-size: 20px; color: var(--red); margin: 16px 0; }
 
     /* ─── FEATURES ─── */
-    .features { padding: 80px 0; }
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-    }
-    .feature-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 32px;
-      transition: box-shadow 0.3s, transform 0.2s;
-    }
+    .features { padding: 80px 0; background: var(--surface); }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+    .feature-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 32px; transition: box-shadow 0.3s, transform 0.2s; }
     .feature-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.08); transform: translateY(-2px); }
     .feature-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
     .feature-card p { color: var(--slate); font-size: 15px; line-height: 1.7; }
-    .feature-icon {
-      width: 48px; height: 48px;
-      background: var(--red);
-      color: var(--white);
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      font-size: 22px;
-    }
+    .feature-icon { width: 48px; height: 48px; background: var(--red); color: var(--white); display: flex; align-items: center; justify-content: center; border-radius: 10px; margin-bottom: 20px; font-size: 22px; }
+
+    /* ─── SECURITY (NemoClaw) ─── */
+    .security { background: var(--navy); color: var(--white); padding: 80px 0; }
+    .security .section-title, .security .section-subtitle { color: var(--white); }
+    .security .section-subtitle { color: rgba(255,255,255,0.7); }
+    .security-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+    .security-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 28px; }
+    .security-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--white); }
+    .security-card p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.7; }
+    .security-card .sec-icon { font-size: 28px; margin-bottom: 14px; }
+    .nvidia-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(118,185,0,0.1); border: 1px solid rgba(118,185,0,0.3); padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; color: var(--green); margin-top: 32px; }
 
     /* ─── HOW IT WORKS ─── */
-    .how-it-works { background: var(--navy); color: var(--white); padding: 80px 0; }
-    .how-it-works .section-title, .how-it-works .section-subtitle { color: var(--white); }
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; counter-reset: step; }
-    .step {
-      text-align: center;
-      padding: 24px;
-      position: relative;
-      counter-increment: step;
-    }
-    .step-number {
-      width: 56px; height: 56px;
-      background: var(--red);
-      color: var(--white);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; font-weight: 800;
-      margin: 0 auto 20px;
-    }
+    .how-it-works { padding: 80px 0; background: var(--surface); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
+    .step { text-align: center; padding: 24px; }
+    .step-number { width: 56px; height: 56px; background: var(--red); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; margin: 0 auto 20px; }
     .step h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
-    .step p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.7; }
+    .step p { font-size: 14px; color: var(--slate); line-height: 1.7; }
 
     /* ─── PRICING ─── */
-    .pricing { padding: 80px 0; }
-    .pricing-card {
-      max-width: 480px;
-      margin: 0 auto;
-      background: var(--white);
-      border: 2px solid var(--border);
-      border-radius: 16px;
-      padding: 48px 40px;
-      text-align: center;
-      transition: box-shadow 0.3s;
-    }
+    .pricing { padding: 80px 0; background: var(--white); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; max-width: 1050px; margin: 0 auto; }
+    .pricing-card { background: var(--surface); border: 2px solid var(--border); border-radius: 16px; padding: 40px 32px; text-align: center; transition: box-shadow 0.3s; position: relative; }
     .pricing-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
-    .pricing-card .price {
-      font-size: 56px;
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .pricing-card .price span { font-size: 20px; font-weight: 500; color: var(--slate); }
-    .pricing-card .price-label { font-size: 14px; color: var(--slate); margin-bottom: 24px; }
-    .pricing-card ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-      margin-bottom: 32px;
-    }
-    .pricing-card li {
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 15px;
-      color: #334155;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .pricing-card.featured { border-color: var(--red); background: var(--white); }
+    .pricing-card.featured::before { content: "MOST POPULAR"; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--red); color: white; font-size: 11px; font-weight: 700; padding: 4px 16px; border-radius: 999px; letter-spacing: 0.05em; }
+    .pricing-card .tier-name { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--slate); margin-bottom: 8px; }
+    .pricing-card .price { font-size: 48px; font-weight: 800; color: var(--navy); line-height: 1; margin-bottom: 4px; }
+    .pricing-card .price span { font-size: 18px; font-weight: 500; color: var(--slate); }
+    .pricing-card .price-label { font-size: 13px; color: var(--slate); margin-bottom: 24px; }
+    .pricing-card ul { list-style: none; padding: 0; text-align: left; margin-bottom: 28px; }
+    .pricing-card li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: #334155; display: flex; align-items: flex-start; gap: 8px; }
     .pricing-card li:last-child { border-bottom: none; }
-    .pricing-card li::before { content: "✓"; color: var(--red); font-weight: 700; font-size: 16px; }
+    .pricing-card li::before { content: "✓"; color: var(--red); font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+    .pricing-card .cta-btn { font-size: 15px; padding: 12px 28px; width: 100%; text-align: center; }
+    .pricing-card.enterprise .cta-btn { background: var(--navy); }
+    .pricing-card.enterprise .cta-btn:hover { background: var(--navy-mid); }
 
     /* ─── INTEGRATIONS ─── */
     .integrations { background: #F1F5F9; padding: 60px 0; }
     .integrations .section-subtitle { margin-bottom: 36px; }
-    .int-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-    .int-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px 24px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--navy);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: box-shadow 0.2s;
-    }
+    .int-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+    .int-item { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; font-size: 13px; font-weight: 600; color: var(--navy); display: flex; align-items: center; gap: 6px; transition: box-shadow 0.2s; }
     .int-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-    .int-item .int-icon { font-size: 20px; }
+    .int-item .int-icon { font-size: 18px; }
 
     /* ─── FAQ ─── */
     .faq { padding: 80px 0; }
     .faq-list { max-width: 800px; margin: 0 auto; }
-    .faq-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      margin-bottom: 12px;
-      overflow: hidden;
-    }
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 20px 24px;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--navy);
-      text-align: left;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: 'Inter', sans-serif;
-    }
+    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; padding: 20px 24px; font-size: 16px; font-weight: 600; color: var(--navy); text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Inter', sans-serif; }
     .faq-question:hover { background: #F8FAFC; }
     .faq-question .arrow { font-size: 18px; color: var(--slate); transition: transform 0.3s; }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
     .faq-answer.open { max-height: 300px; }
     .faq-answer-inner { padding: 0 24px 20px; font-size: 15px; color: var(--slate); line-height: 1.7; }
 
     /* ─── CTA SECTION ─── */
-    .cta-section {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-      color: var(--white);
-      padding: 80px 0;
-      text-align: center;
-    }
+    .cta-section { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); color: var(--white); padding: 80px 0; text-align: center; }
     .cta-section .section-title { color: var(--white); }
     .cta-section .section-subtitle { color: rgba(255,255,255,0.8); }
 
     /* ─── FOOTER ─── */
-    footer {
-      background: var(--navy);
-      color: rgba(255,255,255,0.7);
-      padding: 40px 0 20px;
-      font-size: 14px;
-      border-top: 1px solid var(--navy-light);
-    }
-    .footer-inner {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 40px;
-      margin-bottom: 40px;
-    }
+    footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 40px 0 20px; font-size: 14px; border-top: 1px solid var(--navy-light); }
+    .footer-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
     .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; color: var(--white); font-weight: 700; font-size: 20px; }
-    .footer-logo img { width: 60px; height: auto; }
     .footer-logo svg { width: 36px; height: 36px; flex-shrink: 0; }
     .footer-col h4 { color: var(--white); font-size: 14px; margin-bottom: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
     .footer-col ul { list-style: none; padding: 0; }
@@ -313,26 +183,26 @@
       .section-subtitle { font-size: 16px; }
       nav ul { display: none; }
       .hamburger { display: block; }
-      .pricing-card { padding: 36px 24px; }
-      .pricing-card .price { font-size: 44px; }
+      .de-layout { grid-template-columns: 1fr; gap: 40px; }
+      .de-content h2 { text-align: center; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+      .pricing-card .price { font-size: 40px; }
       .footer-inner { grid-template-columns: 1fr; gap: 24px; }
       .steps { grid-template-columns: 1fr 1fr; }
+      .cta-btn-outline { margin-left: 0; margin-top: 12px; }
     }
     @media (max-width: 480px) {
       .steps { grid-template-columns: 1fr; }
+      .de-visual-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
   <script>
-    // Auto-detect Chinese browser language and redirect to zh.html
-    // Skip if user manually chose English (cookie set)
     (function() {
       if (document.cookie.indexOf('lang=en') !== -1) return;
       var lang = navigator.language || navigator.userLanguage || '';
-      if (/^zh/i.test(lang)) {
-        window.location.replace('zh.html');
-      }
+      if (/^zh/i.test(lang)) { window.location.replace('zh.html'); }
     })();
   </script>
 
@@ -342,11 +212,8 @@
       <div class="header-inner">
         <div class="logo">
           <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="OperatorDeploy Logo">
-            <!-- Shackle (open, swung left) -->
             <path d="M13 20V16C13 10.477 17.477 6 23 6C28.523 6 33 10.477 33 16V18" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
-            <!-- Lock body -->
             <rect x="11" y="22" width="26" height="22" rx="4" fill="#FFFFFF"/>
-            <!-- Red upward arrow inside lock body -->
             <path d="M24 40V30" stroke="#EF4444" stroke-width="3.5" stroke-linecap="round"/>
             <path d="M18.5 34.5L24 29L29.5 34.5" stroke="#EF4444" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
@@ -354,11 +221,12 @@
         </div>
         <nav>
           <ul>
+            <li><a href="#digital-employees">Digital Employees</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#security">Security</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="mailto:roger@operatordeploy.com">Contact Us</a></li>
+            <li><a href="mailto:roger@operatordeploy.com">Contact</a></li>
           </ul>
         </nav>
         <div style="display:flex;align-items:center;gap:12px;">
@@ -371,11 +239,12 @@
         </div>
       </div>
       <div class="mobile-menu" id="mobileMenu">
+        <a href="#digital-employees" onclick="this.parentElement.classList.remove('open')">Digital Employees</a>
         <a href="#features" onclick="this.parentElement.classList.remove('open')">Features</a>
-        <a href="#how-it-works" onclick="this.parentElement.classList.remove('open')">How It Works</a>
+        <a href="#security" onclick="this.parentElement.classList.remove('open')">Security</a>
         <a href="#pricing" onclick="this.parentElement.classList.remove('open')">Pricing</a>
         <a href="#faq" onclick="this.parentElement.classList.remove('open')">FAQ</a>
-        <a href="mailto:roger@operatordeploy.com">Contact Us</a>
+        <a href="mailto:roger@operatordeploy.com">Contact</a>
         <a href="zh.html" onclick="document.cookie='lang=;path=/;max-age=0'">🌐 中文版</a>
       </div>
     </div>
@@ -384,37 +253,145 @@
   <!-- ─── HERO ─── -->
   <section class="hero">
     <div class="container">
-      <h1>Deploy AI Agents That <em>Run Your Business</em></h1>
-      <p>We use expert-level AI knowledge to deploy and maintain intelligent agents that automate your business processes — so you can focus on growth, not operations.</p>
+      <h1>Digitally Replicate Your Employees.<br><em>Deploy AI That Knows Your Business.</em></h1>
+      <p>We deploy enterprise-grade AI agents that carry your employees' knowledge, automate workflows, and handle customer service — with NVIDIA NemoClaw security and privacy built in.</p>
+      <div class="hero-badges">
+        <span class="hero-badge"><span class="nvidia-green">▲</span> Powered by NVIDIA NemoClaw</span>
+        <span class="hero-badge">🔒 Enterprise Security &amp; Privacy</span>
+        <span class="hero-badge">⚡ Live in 5–10 Business Days</span>
+      </div>
       <a href="mailto:roger@operatordeploy.com?subject=Request%20a%20Call%20–%20OperatorDeploy" class="cta-btn">Request a Call</a>
+      <a href="#pricing" class="cta-btn-outline">View Pricing</a>
+    </div>
+  </section>
+
+  <!-- ─── DIGITAL EMPLOYEES (HERO FEATURE) ─── -->
+  <section class="digital-employees" id="digital-employees">
+    <div class="container">
+      <div class="de-layout">
+        <div class="de-content">
+          <h2>Turn Every Employee Into a <em>Digital Twin</em></h2>
+          <p class="lead">Your best employees have irreplaceable knowledge locked in their heads. We extract it, digitize it, and deploy it as an AI agent that anyone in your company can query — without taking a single minute of the original employee's time.</p>
+          <ul class="de-list">
+            <li><strong>Ask the digital employee anything</strong> — get instant answers from their knowledge base, policies, and expertise without interrupting the real person</li>
+            <li><strong>Cross-reference knowledge</strong> — have one digital employee's information interact with another's, or with a real employee's live data</li>
+            <li><strong>Auto-generate outputs</strong> — spreadsheets, reports, workflows, and documentation created from digitized employee knowledge</li>
+            <li><strong>Available 24/7</strong> — the digital twin works while the real employee sleeps, travels, or focuses on high-value work</li>
+            <li><strong>Continuously learning</strong> — the digital employee improves as new information is added, adapting to evolving business needs</li>
+          </ul>
+          <a href="mailto:roger@operatordeploy.com?subject=Digital%20Employee%20Demo%20–%20OperatorDeploy" class="cta-btn">See a Demo</a>
+        </div>
+        <div class="de-visual">
+          <div style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:20px;">Your Digital Workforce</div>
+          <div class="de-visual-grid">
+            <div class="de-agent highlight">
+              <div class="emoji">👤</div>
+              <div class="name">Sarah (Sales)</div>
+              <div class="role">Digital Twin</div>
+            </div>
+            <div class="de-agent highlight">
+              <div class="emoji">👤</div>
+              <div class="name">Mike (Ops)</div>
+              <div class="role">Digital Twin</div>
+            </div>
+            <div class="de-agent highlight">
+              <div class="emoji">👤</div>
+              <div class="name">Lisa (Finance)</div>
+              <div class="role">Digital Twin</div>
+            </div>
+            <div class="de-agent">
+              <div class="emoji">🤖</div>
+              <div class="name">Support Bot</div>
+              <div class="role">Customer Service</div>
+            </div>
+            <div class="de-agent">
+              <div class="emoji">📊</div>
+              <div class="name">Report Agent</div>
+              <div class="role">Analytics</div>
+            </div>
+            <div class="de-agent">
+              <div class="emoji">⚙️</div>
+              <div class="name">Workflow Agent</div>
+              <div class="role">Automation</div>
+            </div>
+          </div>
+          <div class="de-arrows">↕ ↔ ↕</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.4);">Digital employees interact with each other and your real team</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ─── FEATURES ─── -->
   <section class="features" id="features">
     <div class="container">
-      <h2 class="section-title">What We Deliver</h2>
-      <p class="section-subtitle">AI agents tailored to your business, deployed with the tools you already use.</p>
+      <h2 class="section-title">What We Deploy</h2>
+      <p class="section-subtitle">AI agents tailored to your business — from digital employees to fully automated workflows.</p>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>End-to-End Automation</h3>
-          <p>From customer communications to inventory management — we identify repetitive processes and replace them with autonomous AI agents that work 24/7.</p>
+          <div class="feature-icon">👥</div>
+          <h3>Digital Employee Replication</h3>
+          <p>Clone your team's knowledge into AI agents. Ask them questions, generate reports, cross-reference data — without using the real employee's time.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🔗</div>
-          <h3>Deep Integrations</h3>
-          <p>Your AI agents connect directly with your existing platforms — Google Workspace, Discord, LINE, Hospitable, n8n, Zapier, and more — no rip-and-replace required.</p>
+          <div class="feature-icon">⚙️</div>
+          <h3>Workflow Automation</h3>
+          <p>Automate multi-step business processes end-to-end. From lead intake to invoice generation, your workflows run on autopilot.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Customer Service Chatbot</h3>
+          <p>24/7 AI-powered customer support that handles inquiries, resolves issues, and escalates when needed — in any language.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Internal Knowledge Base</h3>
+          <p>Ingest company docs, SOPs, and policies into a queryable agent. Any employee gets instant answers to operational questions.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h3>Sales &amp; Lead Qualification</h3>
+          <p>AI agents that handle inbound inquiries, qualify leads, pull CRM data, and schedule meetings — working around the clock.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🌐</div>
-          <h3>Automatic Internet Learning</h3>
-          <p>Agents continuously scan the web for market trends, competitor moves, and industry updates relevant to your business — delivering insights automatically.</p>
+          <h3>Self-Recursive Learning</h3>
+          <p>Agents continuously improve from their own outputs and your feedback — compounding intelligence without manual retraining.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🧠</div>
-          <h3>Self-Recursive Improvement</h3>
-          <p>Our agents learn from their own outputs and your feedback, compounding improvements over time without manual retraining or intervention.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECURITY (NemoClaw) ─── -->
+  <section class="security" id="security">
+    <div class="container">
+      <h2 class="section-title">Enterprise Security &amp; Privacy</h2>
+      <p class="section-subtitle">Powered by NVIDIA NemoClaw — the enterprise security layer built for AI agents.</p>
+      <div class="security-grid">
+        <div class="security-card">
+          <div class="sec-icon">🛡️</div>
+          <h3>Sandboxed Agent Runtime</h3>
+          <p>Each AI agent runs in its own isolated environment via NVIDIA OpenShell. Agents can't access data or systems outside their defined scope.</p>
+        </div>
+        <div class="security-card">
+          <div class="sec-icon">🔐</div>
+          <h3>Privacy Router</h3>
+          <p>Sensitive data stays on local models running on-device. Only non-sensitive queries route to cloud models — your private data never leaves your environment.</p>
+        </div>
+        <div class="security-card">
+          <div class="sec-icon">📋</div>
+          <h3>Policy-Based Access Control</h3>
+          <p>Define exactly what each agent can see, execute, and report. Company-defined access policies enforced at the runtime level.</p>
+        </div>
+        <div class="security-card">
+          <div class="sec-icon">📊</div>
+          <h3>Full Audit Trail</h3>
+          <p>Every agent action is logged and auditable. Know exactly what your AI did, when it did it, and what data it accessed — critical for compliance.</p>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <div class="nvidia-badge">
+          <span>▲</span> Built on NVIDIA NemoClaw + OpenShell
         </div>
       </div>
     </div>
@@ -424,27 +401,27 @@
   <section class="how-it-works" id="how-it-works">
     <div class="container">
       <h2 class="section-title">How It Works</h2>
-      <p class="section-subtitle">From first call to live automation in four steps.</p>
+      <p class="section-subtitle">From first call to live AI agents in four steps.</p>
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
           <h3>Discovery Call</h3>
-          <p>We learn your business, identify manual processes, and map out which tasks AI agents can take over immediately.</p>
+          <p>We learn your business, identify key employees to digitize, and map out which processes AI agents can automate.</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>Custom AI Design</h3>
-          <p>We design agents tailored to your workflows — choosing the right models, integrations, and automation logic for your needs.</p>
+          <h3>Knowledge Extraction</h3>
+          <p>We capture employee expertise, company workflows, and institutional knowledge to build your custom AI agents.</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>Deployment</h3>
-          <p>Agents go live in your environment. We handle all the technical setup, testing, and integration with your existing tools.</p>
+          <h3>Secure Deployment</h3>
+          <p>Agents deploy with NVIDIA NemoClaw security — sandboxed, privacy-routed, and policy-controlled from day one.</p>
         </div>
         <div class="step">
           <div class="step-number">4</div>
           <h3>Ongoing Optimization</h3>
-          <p>We monitor performance, apply updates, and continuously improve your agents as your business evolves.</p>
+          <p>We monitor performance, add new knowledge, and continuously improve your agents as your business evolves.</p>
         </div>
       </div>
     </div>
@@ -455,19 +432,59 @@
     <div class="container">
       <h2 class="section-title">Pricing</h2>
       <p class="section-subtitle">Transparent pricing. No hidden fees. Cancel anytime.</p>
-      <div class="pricing-card">
-        <div class="price">$250 <span>USD/mo</span></div>
-        <div class="price-label">Basic setup · Customized quotes for larger deployments</div>
-        <ul>
-          <li>Personal assistant AI agent deployment</li>
-          <li>Integration with your existing tools</li>
-          <li>Automatic internet learning</li>
-          <li>Self-recursive improvement</li>
-          <li>Ongoing monitoring &amp; optimization</li>
-          <li>Live within 5–10 business days</li>
-          <li>You own your agents and data</li>
-        </ul>
-        <a href="mailto:roger@operatordeploy.com?subject=Request%20a%20Call%20–%20OperatorDeploy" class="cta-btn">Request a Call</a>
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div class="tier-name">Starter</div>
+          <div class="price">$1,500 <span>USD/mo</span></div>
+          <div class="price-label">For small businesses getting started with AI</div>
+          <ul>
+            <li>1 AI agent deployment</li>
+            <li>Integration with your existing tools</li>
+            <li>Automatic internet learning</li>
+            <li>Self-recursive improvement</li>
+            <li>Ongoing monitoring &amp; optimization</li>
+            <li>Live within 5–10 business days</li>
+            <li>You own your agents and data</li>
+          </ul>
+          <a href="mailto:roger@operatordeploy.com?subject=Starter%20Plan%20–%20OperatorDeploy" class="cta-btn">Get Started</a>
+        </div>
+
+        <!-- Business (Featured) -->
+        <div class="pricing-card featured">
+          <div class="tier-name">Business</div>
+          <div class="price">$3,000 <span>USD/mo</span></div>
+          <div class="price-label">NemoClaw security + digital employees</div>
+          <ul>
+            <li>Digital employee replication (up to 3 employees)</li>
+            <li>Workflow automation (up to 3 workflows)</li>
+            <li>Customer service chatbot</li>
+            <li>NVIDIA NemoClaw security &amp; privacy</li>
+            <li>Sandboxed agent runtime (OpenShell)</li>
+            <li>Privacy router — sensitive data stays local</li>
+            <li>Full audit trail &amp; compliance logging</li>
+            <li>All Starter features included</li>
+          </ul>
+          <a href="mailto:roger@operatordeploy.com?subject=Business%20Plan%20–%20OperatorDeploy" class="cta-btn">Request a Call</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card enterprise">
+          <div class="tier-name">Enterprise</div>
+          <div class="price" style="font-size:36px;">Custom</div>
+          <div class="price-label">Full-scale AI transformation</div>
+          <ul>
+            <li>Unlimited digital employees</li>
+            <li>Unlimited workflow automation</li>
+            <li>Custom integrations &amp; compliance agents</li>
+            <li>On-premises or hybrid deployment</li>
+            <li>Dedicated deployment team</li>
+            <li>Hardware consultation (NVIDIA DGX)</li>
+            <li>Priority support &amp; SLA</li>
+            <li>All Business features included</li>
+          </ul>
+          <a href="mailto:roger@operatordeploy.com?subject=Enterprise%20Plan%20–%20OperatorDeploy" class="cta-btn" style="background:var(--navy);">Contact Sales</a>
+        </div>
       </div>
     </div>
   </section>
@@ -493,6 +510,7 @@
         <div class="int-item"><span class="int-icon">🔊</span> ElevenLabs</div>
         <div class="int-item"><span class="int-icon">🎬</span> Kling AI</div>
         <div class="int-item"><span class="int-icon">☁️</span> Cloudflare</div>
+        <div class="int-item"><span class="int-icon" style="color:var(--green);">▲</span> NVIDIA NemoClaw</div>
       </div>
     </div>
   </section>
@@ -505,11 +523,29 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-            How long does it take to get an AI agent live?
+            What is a "digital employee"?
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Most agents go live within 5–10 business days. Simple personal assistant workflows can be running even sooner depending on complexity.</div>
+            <div class="faq-answer-inner">A digital employee is an AI agent that carries the knowledge, expertise, and decision-making patterns of a real employee. Anyone in your company can chat with it to get answers, generate documents, or trigger workflows — without using the real employee's time. Think of it as a knowledge clone that works 24/7.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
+            How does NVIDIA NemoClaw protect my data?
+            <span class="arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">NemoClaw provides three layers of protection: (1) OpenShell sandboxes each agent in its own isolated runtime, (2) a privacy router keeps sensitive data on local models and only sends non-sensitive queries to cloud AI, and (3) company-defined access policies control exactly what each agent can see and do. Every action is logged for full auditability.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
+            How long does it take to get AI agents live?
+            <span class="arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Most agents go live within 5–10 business days. Digital employee replication may take slightly longer depending on the depth of knowledge extraction required.</div>
           </div>
         </div>
         <div class="faq-item">
@@ -518,7 +554,7 @@
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">No. We handle all the technical work — from design to deployment to ongoing maintenance. You just tell us what processes you want automated, and we build it.</div>
+            <div class="faq-answer-inner">No. We handle everything — knowledge extraction, agent design, security setup, deployment, and ongoing maintenance. You just tell us what you need automated.</div>
           </div>
         </div>
         <div class="faq-item">
@@ -527,16 +563,7 @@
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Any small business. If you have processes that eat up your time or your team's time, we can automate them. Hospitality, real estate, e-commerce, professional services, content creation, finance — we've worked across all of them.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-            What does "self-recursive learning" mean?
-            <span class="arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Your AI agents review their own performance and outputs over time, identifying patterns and improvements automatically. Think of it as an employee that gets better every week without being trained — learning from results, not just instructions.</div>
+            <div class="faq-answer-inner">Any business with employees and processes. Hospitality, real estate, e-commerce, professional services, content creation, finance, manufacturing — if you have knowledge in people's heads and repetitive workflows, we can help.</div>
           </div>
         </div>
         <div class="faq-item">
@@ -545,16 +572,7 @@
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Yes. No long-term contracts. You can cancel your subscription at any time. We believe our work speaks for itself.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('.arrow').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-            What's included in the $250 USD/mo starting price?
-            <span class="arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">The $250 USD/mo tier includes basic setup with personal assistant workflows — an AI agent deployed into your environment, integrated with your existing tools, with ongoing monitoring and optimization. Need more agents, complex integrations, or multi-department automation? We provide customized quotes based on your scope.</div>
+            <div class="faq-answer-inner">Yes. No long-term contracts on Starter or Business plans. Enterprise plans have custom terms. You own your agents and data regardless.</div>
           </div>
         </div>
         <div class="faq-item">
@@ -563,7 +581,7 @@
             <span class="arrow">+</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Yes. Your agents, data, and configurations belong to you. If you cancel, we'll hand everything over — no lock-in, no hostage-taking.</div>
+            <div class="faq-answer-inner">Yes. Your agents, data, knowledge bases, and configurations belong to you. If you cancel, we hand everything over — no lock-in, no hostage-taking.</div>
           </div>
         </div>
       </div>
@@ -573,8 +591,8 @@
   <!-- ─── CTA SECTION ─── -->
   <section class="cta-section">
     <div class="container">
-      <h2 class="section-title">Ready to Automate Your Business?</h2>
-      <p class="section-subtitle">Book a call. We'll map out exactly which processes AI can take over — and how fast.</p>
+      <h2 class="section-title">Ready to Deploy Your Digital Workforce?</h2>
+      <p class="section-subtitle">Book a call. We'll map out which employees to digitize, which processes to automate, and how fast we can go live.</p>
       <a href="mailto:roger@operatordeploy.com?subject=Request%20a%20Call%20–%20OperatorDeploy" class="cta-btn">Request a Call</a>
     </div>
   </section>
@@ -593,13 +611,14 @@
             </svg>
             <span>OperatorDeploy</span>
           </div>
-          <p>AI agents deployed and maintained for your business.</p>
+          <p>Enterprise AI agents deployed and maintained for your business.</p>
         </div>
         <div class="footer-col">
           <h4>Navigation</h4>
           <ul>
+            <li><a href="#digital-employees">Digital Employees</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#security">Security</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
