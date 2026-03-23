@@ -59,6 +59,29 @@
     .cta-btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.3); color: var(--white); font-size: 16px; font-weight: 600; padding: 14px 28px; border-radius: 8px; display: inline-block; text-decoration: none; margin-left: 16px; transition: border-color 0.3s; }
     .cta-btn-outline:hover { border-color: var(--white); text-decoration: none; }
 
+    .credentials { background: var(--white); padding: 32px 0; border-bottom: 1px solid var(--border); }
+    .cred-inner { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+    .cred-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: var(--slate); }
+    .cred-item .cred-icon { font-size: 20px; }
+    .cred-item .cred-label { line-height: 1.3; }
+    .cred-item .cred-sub { font-size: 10px; font-weight: 500; color: #94A3B8; display: block; }
+    .cred-divider { width: 1px; height: 32px; background: var(--border); }
+
+    .proven { padding: 80px 0; background: #F1F5F9; }
+    .proven-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+    .proven-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 32px; }
+    .proven-card .proven-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--red); margin-bottom: 12px; }
+    .proven-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .proven-card .proven-desc { font-size: 14px; color: var(--slate); line-height: 1.8; margin-bottom: 16px; }
+    .proven-card .proven-result { font-size: 13px; font-weight: 600; color: var(--navy); background: var(--surface); padding: 10px 14px; border-radius: 8px; border-left: 3px solid var(--red); }
+
+    .security-first { background: var(--surface); padding: 64px 0; }
+    .sf-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+    .sf-inner h2 { font-size: 28px; font-weight: 800; margin-bottom: 16px; }
+    .sf-inner p { font-size: 16px; color: var(--slate); line-height: 1.8; }
+    .sf-inner p strong { color: var(--navy); }
+    .sf-divider { width: 48px; height: 3px; background: var(--red); margin: 24px auto; border-radius: 2px; }
+
     .digital-employees { padding: 80px 0; background: var(--white); }
     .de-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
     .de-content h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; line-height: 1.2; text-align: left; }
@@ -214,6 +237,33 @@
     </div>
   </section>
 
+  <!-- ─── 專業認證 ─── -->
+  <section class="credentials">
+    <div class="container">
+      <div class="cred-inner">
+        <div class="cred-item">
+          <span class="cred-icon" style="color:var(--green);">▲</span>
+          <div class="cred-label">NVIDIA NemoClaw<span class="cred-sub">認證部署者（進行中）</span></div>
+        </div>
+        <div class="cred-divider"></div>
+        <div class="cred-item">
+          <span class="cred-icon">🦞</span>
+          <div class="cred-label">OpenClaw 部署者<span class="cred-sub">自 2026 年 1 月起</span></div>
+        </div>
+        <div class="cred-divider"></div>
+        <div class="cred-item">
+          <span class="cred-icon">🎓</span>
+          <div class="cred-label">MIT AI 與機器學習<span class="cred-sub">專業教育（即將完成）</span></div>
+        </div>
+        <div class="cred-divider"></div>
+        <div class="cred-item">
+          <span class="cred-icon">🔒</span>
+          <div class="cred-label">企業安全優先<span class="cred-sub">每次部署，毫無例外</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="digital-employees" id="digital-employees">
     <div class="container">
       <div class="de-layout">
@@ -262,6 +312,53 @@
     </div>
   </section>
 
+  <!-- ─── 實際部署案例 ─── -->
+  <section class="proven" id="proven">
+    <div class="container">
+      <h2 class="section-title">實際部署案例</h2>
+      <p class="section-subtitle">真實建構並運營中的案例——不是假設。</p>
+      <div class="proven-grid">
+        <div class="proven-card">
+          <div class="proven-label">飯店民宿</div>
+          <h3>房客溝通自動化</h3>
+          <div class="proven-desc">AI 代理處理多個物業的房客訊息——入住指引、房屋規範、維修協調、評價回覆——支援英文與中文，全天候運作。</div>
+          <div class="proven-result">→ 管理 25 間出租單位的房客諮詢，無需人工介入</div>
+        </div>
+        <div class="proven-card">
+          <div class="proven-label">金融</div>
+          <h3>財務監控與報告</h3>
+          <div class="proven-desc">AI 代理監控市場部位、產生每日報告、掃描交易訊號，並根據預設策略執行模擬交易——搭配完整稽核軌跡。</div>
+          <div class="proven-result">→ 持續市場監控，搭配自動化部位管理</div>
+        </div>
+        <div class="proven-card">
+          <div class="proven-label">營運</div>
+          <h3>多頻道客戶服務</h3>
+          <div class="proven-desc">單一 AI 代理同時運作於 LINE、WhatsApp 和 Discord——處理客戶諮詢、路由問題，並跨頻道和語言維持上下文。</div>
+          <div class="proven-result">→ 3 個頻道、2 種語言、1 個代理——零遺漏</div>
+        </div>
+        <div class="proven-card">
+          <div class="proven-label">商業情報</div>
+          <h3>競爭研究與簡報</h3>
+          <div class="proven-desc">AI 代理每日掃描新聞、社群媒體和產業資訊——產出結構化的競爭者、市場趨勢和商機簡報。</div>
+          <div class="proven-result">→ 每日自動產出情報簡報，無需人工研究</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 安全優先理念 ─── -->
+  <section class="security-first">
+    <div class="container">
+      <div class="sf-inner">
+        <h2>安全優先，功能其次。</h2>
+        <div class="sf-divider"></div>
+        <p>大多數 AI 部署者急於增加功能——更多代理、更多功能、更多整合。<strong>我們從安全開始。</strong>我們部署的每個代理都在 NVIDIA NemoClaw 的沙箱環境中運行，搭配隱私路由、基於政策的存取控制和完整稽核軌跡——在它接觸您的任何資料之前。</p>
+        <br>
+        <p>這不是一個勾選項目，而是基礎。<strong>沒有企業級安全的 AI 部署不是創新——是風險。</strong>我們先築好防線，再讓代理在其中運作。</p>
+      </div>
+    </div>
+  </section>
+
   <section class="security" id="security">
     <div class="container">
       <h2 class="section-title">企業級安全與隱私防護</h2>
@@ -278,13 +375,13 @@
 
   <section class="how-it-works" id="how-it-works">
     <div class="container">
-      <h2 class="section-title">運作方式</h2>
-      <p class="section-subtitle">從首次通話到 AI 代理上線，只需四個步驟。</p>
+      <h2 class="section-title">我們的部署流程</h2>
+      <p class="section-subtitle">AI 部署是複雜的專業工作——這正是您需要認證專家的原因。以下是我們團隊為每個案例遵循的嚴謹流程。</p>
       <div class="steps">
-        <div class="step"><div class="step-number">1</div><h3>需求探索通話</h3><p>我們深入了解您的業務，找出需要數位化的關鍵員工，規劃 AI 代理可以自動化的流程。</p></div>
-        <div class="step"><div class="step-number">2</div><h3>知識提取</h3><p>我們擷取員工專業知識、公司工作流程和組織知識，用以建構您的客製化 AI 代理。</p></div>
-        <div class="step"><div class="step-number">3</div><h3>安全部署</h3><p>代理搭載 NVIDIA NemoClaw 安全防護上線——從第一天起即具備沙箱化、隱私路由和政策控制。</p></div>
-        <div class="step"><div class="step-number">4</div><h3>持續優化</h3><p>我們監控效能、增加新知識，並隨著您的業務發展持續改進代理。</p></div>
+        <div class="step"><div class="step-number">1</div><h3>業務與風險評估</h3><p>在撰寫任何配置之前，我們先稽核您的營運、辨識高影響力的自動化目標、評估資料敏感度，並定義安全邊界。</p></div>
+        <div class="step"><div class="step-number">2</div><h3>知識架構設計</h3><p>我們的團隊與您的員工進行結構化知識提取會議，繪製決策樹，並在適當的存取控制下設計代理的知識庫架構。</p></div>
+        <div class="step"><div class="step-number">3</div><h3>安全部署與測試</h3><p>代理在 NVIDIA NemoClaw 環境中部署，搭配沙箱化、隱私路由和政策執行。上線前我們進行對抗性測試和合規驗證。</p></div>
+        <div class="step"><div class="step-number">4</div><h3>監控與持續改進</h3><p>上線後，我們監控代理效能、審查稽核日誌、調整準確度、增加新知識——並定期向您的管理層提交報告。</p></div>
       </div>
     </div>
   </section>
