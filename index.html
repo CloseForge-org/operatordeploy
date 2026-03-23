@@ -72,6 +72,32 @@
     .cta-btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.3); color: var(--white); font-size: 16px; font-weight: 600; padding: 14px 28px; border-radius: 8px; display: inline-block; text-decoration: none; margin-left: 16px; transition: border-color 0.3s; }
     .cta-btn-outline:hover { border-color: var(--white); text-decoration: none; }
 
+    /* ─── CREDENTIALS ─── */
+    .credentials { background: var(--white); padding: 32px 0; border-bottom: 1px solid var(--border); }
+    .cred-inner { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+    .cred-item { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: var(--slate); }
+    .cred-item .cred-icon { font-size: 20px; }
+    .cred-item .cred-label { line-height: 1.3; }
+    .cred-item .cred-sub { font-size: 10px; font-weight: 500; color: #94A3B8; display: block; }
+    .cred-divider { width: 1px; height: 32px; background: var(--border); }
+
+    /* ─── PROVEN DEPLOYMENTS ─── */
+    .proven { padding: 80px 0; background: #F1F5F9; }
+    .proven-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+    .proven-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 32px; }
+    .proven-card .proven-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--red); margin-bottom: 12px; }
+    .proven-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .proven-card .proven-desc { font-size: 14px; color: var(--slate); line-height: 1.7; margin-bottom: 16px; }
+    .proven-card .proven-result { font-size: 13px; font-weight: 600; color: var(--navy); background: var(--surface); padding: 10px 14px; border-radius: 8px; border-left: 3px solid var(--red); }
+
+    /* ─── SECURITY-FIRST ─── */
+    .security-first { background: var(--surface); padding: 64px 0; }
+    .sf-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+    .sf-inner h2 { font-size: 28px; font-weight: 800; margin-bottom: 16px; }
+    .sf-inner p { font-size: 16px; color: var(--slate); line-height: 1.7; }
+    .sf-inner p strong { color: var(--navy); }
+    .sf-divider { width: 48px; height: 3px; background: var(--red); margin: 24px auto; border-radius: 2px; }
+
     /* ─── DIGITAL EMPLOYEES (HERO FEATURE) ─── */
     .digital-employees { padding: 80px 0; background: var(--white); }
     .de-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
@@ -265,6 +291,33 @@
     </div>
   </section>
 
+  <!-- ─── CREDENTIALS ─── -->
+  <section class="credentials">
+    <div class="container">
+      <div class="cred-inner">
+        <div class="cred-item">
+          <span class="cred-icon" style="color:var(--green);">▲</span>
+          <div class="cred-label">NVIDIA NemoClaw<span class="cred-sub">Certified Deployer (in progress)</span></div>
+        </div>
+        <div class="cred-divider"></div>
+        <div class="cred-item">
+          <span class="cred-icon">🦞</span>
+          <div class="cred-label">OpenClaw Deployer<span class="cred-sub">Since January 2026</span></div>
+        </div>
+        <div class="cred-divider"></div>
+        <div class="cred-item">
+          <span class="cred-icon">🎓</span>
+          <div class="cred-label">MIT AI &amp; Machine Learning<span class="cred-sub">Professional Education (upcoming)</span></div>
+        </div>
+        <div class="cred-divider"></div>
+        <div class="cred-item">
+          <span class="cred-icon">🔒</span>
+          <div class="cred-label">Enterprise Security First<span class="cred-sub">Every deployment, every time</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── DIGITAL EMPLOYEES (HERO FEATURE) ─── -->
   <section class="digital-employees" id="digital-employees">
     <div class="container">
@@ -363,6 +416,53 @@
     </div>
   </section>
 
+  <!-- ─── PROVEN DEPLOYMENTS ─── -->
+  <section class="proven" id="proven">
+    <div class="container">
+      <h2 class="section-title">Proven Deployments</h2>
+      <p class="section-subtitle">Real use cases we've built and operate — not hypotheticals.</p>
+      <div class="proven-grid">
+        <div class="proven-card">
+          <div class="proven-label">Hospitality</div>
+          <h3>Guest Communications Automation</h3>
+          <div class="proven-desc">AI agents handling guest messaging across multiple properties — check-in instructions, house rules, maintenance coordination, and review responses — in English and Mandarin, 24/7.</div>
+          <div class="proven-result">→ Handles guest inquiries across 25 rental units without human intervention</div>
+        </div>
+        <div class="proven-card">
+          <div class="proven-label">Finance</div>
+          <h3>Financial Monitoring &amp; Reporting</h3>
+          <div class="proven-desc">AI agents monitoring market positions, generating daily reports, scanning for trading signals, and executing paper trades based on predefined strategies — with full audit trail.</div>
+          <div class="proven-result">→ Continuous market surveillance with automated position management</div>
+        </div>
+        <div class="proven-card">
+          <div class="proven-label">Operations</div>
+          <h3>Multi-Channel Customer Service</h3>
+          <div class="proven-desc">A single AI agent operating simultaneously on LINE, WhatsApp, and Discord — handling customer inquiries, routing issues, and maintaining context across channels and languages.</div>
+          <div class="proven-result">→ 3 channels, 2 languages, 1 agent — zero messages dropped</div>
+        </div>
+        <div class="proven-card">
+          <div class="proven-label">Intelligence</div>
+          <h3>Competitive Research &amp; Briefings</h3>
+          <div class="proven-desc">AI agent that scans news, social media, and industry sources daily — producing structured briefings on competitors, market trends, and actionable opportunities.</div>
+          <div class="proven-result">→ Daily intelligence briefings delivered automatically, no manual research</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECURITY-FIRST MESSAGING ─── -->
+  <section class="security-first">
+    <div class="container">
+      <div class="sf-inner">
+        <h2>Security First. Features Second.</h2>
+        <div class="sf-divider"></div>
+        <p>Most AI deployers race to add capabilities — more agents, more features, more integrations. <strong>We start with security.</strong> Every agent we deploy runs inside NVIDIA NemoClaw's sandboxed environment with privacy routing, policy-based access control, and full audit trails — before it touches a single piece of your data.</p>
+        <br>
+        <p>This isn't a checkbox. It's the foundation. <strong>Deploying AI without enterprise-grade security isn't innovation — it's liability.</strong> We build the walls first, then let the agents work inside them.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── SECURITY (NemoClaw) ─── -->
   <section class="security" id="security">
     <div class="container">
@@ -401,28 +501,28 @@
   <!-- ─── HOW IT WORKS ─── -->
   <section class="how-it-works" id="how-it-works">
     <div class="container">
-      <h2 class="section-title">How It Works</h2>
-      <p class="section-subtitle">From first call to live AI agents in four steps.</p>
+      <h2 class="section-title">Our Deployment Process</h2>
+      <p class="section-subtitle">AI deployment is complex — that's why you hire certified experts. Here's the rigorous process our team follows for every engagement.</p>
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>Discovery Call</h3>
-          <p>We learn your business, identify key employees to digitize, and map out which processes AI agents can automate.</p>
+          <h3>Business &amp; Risk Assessment</h3>
+          <p>We audit your operations, identify high-impact automation targets, assess data sensitivity, and define security boundaries before writing a single line of configuration.</p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <h3>Knowledge Extraction</h3>
-          <p>We capture employee expertise, company workflows, and institutional knowledge to build your custom AI agents.</p>
+          <h3>Knowledge Architecture</h3>
+          <p>Our team conducts structured knowledge extraction sessions with your employees, maps decision trees, and architects the agent's knowledge base with proper access controls.</p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <h3>Secure Deployment</h3>
-          <p>Agents deploy with NVIDIA NemoClaw security — sandboxed, privacy-routed, and policy-controlled from day one.</p>
+          <h3>Secured Deployment &amp; Testing</h3>
+          <p>Agents deploy inside NVIDIA NemoClaw with sandboxing, privacy routing, and policy enforcement. We run adversarial testing and compliance validation before go-live.</p>
         </div>
         <div class="step">
           <div class="step-number">4</div>
-          <h3>Ongoing Optimization</h3>
-          <p>We monitor performance, add new knowledge, and continuously improve your agents as your business evolves.</p>
+          <h3>Monitoring &amp; Continuous Improvement</h3>
+          <p>Post-launch, we monitor agent performance, review audit logs, tune accuracy, and add new knowledge — with regular reporting to your leadership team.</p>
         </div>
       </div>
     </div>
